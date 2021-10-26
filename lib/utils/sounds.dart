@@ -7,6 +7,7 @@ class Sounds {
       FlameAudio.bgm.initialize();
       await FlameAudio.audioCache.loadAll([
         'sound_bg.mp3',
+        'mhxy_jnyw.mp3',
         // 'attack_player.mp3',
         // 'attack_fire_ball.wav',
         // 'attack_enemy.mp3',
