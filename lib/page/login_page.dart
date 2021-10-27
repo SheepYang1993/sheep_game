@@ -1,6 +1,7 @@
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sheep_game/page/select_user_page.dart';
 import 'package:sheep_game/utils/sounds.dart';
 
 class LoginPage extends StatefulWidget {
@@ -57,9 +58,6 @@ class _LoginPageState extends State<LoginPage> with WidgetsBindingObserver {
             SizedBox(
               width: 150,
               child: ElevatedButton(
-                // shape: RoundedRectangleBorder(
-                //   borderRadius: BorderRadius.circular(5.0),
-                // ),
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(BeveledRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0))), //圆角弧度
@@ -74,7 +72,13 @@ class _LoginPageState extends State<LoginPage> with WidgetsBindingObserver {
                     fontSize: 17.0,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SelectUserPage()),
+                  );
+                },
               ),
             ),
           ],
